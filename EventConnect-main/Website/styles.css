@@ -1,0 +1,184 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color for contrast */
+}
+
+/* Header Styling with Blue Theme */
+header {
+    background-color: #1e90ff; /* Dodger blue background */
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #fff; /* White text color */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #add8e6; /* Light blue hover effect */
+}
+
+.location-search {
+    display: flex;
+    gap: 10px;
+}
+
+.location select, .search input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #1e90ff; /* Blue border for inputs */
+    color: #1e90ff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #87ceeb; /* Sky blue background */
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+/* Service Categories on the Left */
+.service-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 30%;
+}
+
+.category {
+    cursor: pointer;
+    text-align: center;
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #1e90ff; /* Blue border around images */
+}
+
+.category p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #1e90ff; /* Blue text for category names */
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #1e90ff; /* Blue border around the carousel */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Carousel Navigation Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(30, 144, 255, 0.7); /* Semi-transparent blue */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #1e90ff; /* Full blue on hover */
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-categories {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-slide img {
+        height: auto;
+    }
+}
