@@ -1,14 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Fredoka One', sans-serif;
 }
 
 body {
   background-color: #0583D2;
+  height: 100vh;
+  background-image: url('your-image-url'); /* Optional: Replace with a background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Header styling */
+header {
+  background-color: #fff;
+  padding: 1% 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  font-family: "Fredoka One", cursive;
+  color: #0583D2;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  margin-left: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #0583D2;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header ul li a:hover {
+  color: #000;
+  transform: scale(1.05); /* Add hover effect */
+}
+
+/* Login Container */
+.login-container {
+  background-color: white;
+  padding: 7%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+  width: 40vw;
+  text-align: center;
+  z-index: 10;
+  margin-top: 10vh;
 }
 
 h1 {
@@ -19,70 +81,140 @@ h1 {
   letter-spacing: 0.1em;
 }
 
+input {
+  margin-bottom: 3%;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #0583D2;
+  box-shadow: 0 0 8px rgba(5, 131, 210, 0.5);
+}
+
+button {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  background-color: #0583D2;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 5%;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+#sign-up {
+  margin-top: 3%;
+}
+
 p {
   margin-top: 5%;
   margin-bottom: 5%;
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ccc;
   line-height: 0.1em;
 }
 
 p span {
-  background:#fff;
-  padding:0 10px;
+  background: #fff;
+  padding: 0 10px;
 }
 
-input {
-  margin-bottom: 3%;
-}
-
-input:last-of-type {
-  margin-bottom: 0;
-}
-
-input, button {
-  padding: 3%;
+/* Footer styling */
+footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 5px 0;
+  font-size: 0.7em;
+  color: #000;
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
 
-.login-container {
-  background-color: white;
-  padding: 7%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  /* horizontal align */
-  width: 40vw;
-  margin-left: 30vw;
-  /* vertical align */
-  height: 70vh;
-  margin-top: 15vh;
+footer p {
+  color: #000;
+  font-family: "Fredoka One", cursive;
 }
 
-#submit, #create-acct-btn {
-  background-color: #0583D2;
-  color: white;
-  border: none;
-  margin-top: 5%;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-button:hover {
-  cursor: pointer;
-  opacity: 0.8;
-  transition: 0.3s;
+@keyframes buttonPop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
-#sign-up {
-  border: none;
+/* Responsive styling */
+@media (max-width: 768px) {
+  .login-container {
+    width: 60vw;
+    padding: 5%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 }
 
-#create-acct {
-  display: none;
-}
+@media (max-width: 480px) {
+  .login-container {
+    width: 80vw;
+    padding: 5%;
+  }
 
-#return-btn {
-  background: none;
-  color: grey;
-  text-decoration: underline;
-  border: none;
-  margin-top: 3%;
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  header nav ul li a {
+    font-size: 0.9em;
+  }
+
+  input, button {
+    font-size: 0.9em;
+    padding: 2.5%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p span {
+    font-size: 0.9em;
+  }
+
+  footer {
+    font-size: 0.6em;
+  }
 }
