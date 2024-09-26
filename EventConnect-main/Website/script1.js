@@ -26,13 +26,27 @@ setInterval(() => {
     moveSlide(1);
 }, 3000);
   // Toggle the visibility of the profile dropdown
-document.getElementById('profile-link').addEventListener('click', function (event) {
-    event.preventDefault();
-    const dropdown = document.getElementById('profile-dropdown');
-    dropdown.classList.toggle('visible');
+// Function to toggle the dropdown visibility
+function toggleDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Logout button click event
+document.getElementById('logout-btn').addEventListener('click', function() {
+    // Redirect to the index.html page
+    window.location.href = 'index.html';
 });
 
-// Logout functionality (you can replace this with your real logout logic)
-document.getElementById('logout-btn').addEventListener('click', function () {
-    alert('You have logged out!');
-});
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+

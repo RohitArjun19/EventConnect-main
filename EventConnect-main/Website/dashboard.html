@@ -28,11 +28,13 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="profile-menu">
-                        <a href="#" id="profile-link">My Profile</a>
-                        <div class="profile-dropdown" id="profile-dropdown">
-                            <p>Your Email: <span>youremail@example.com</span></p>
-                            <button id="logout-btn">Logout</button>
+                    <li>
+                       <div class="dropdown">
+                            <button onclick="toggleDropdown()" class="dropbtn">My Profile</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <p>Your Email: <span>youremail@example.com</span></p>
+                                <button id="logout-btn">Logout</button>
+                            </div>
                         </div>
                     </li>
                 </ul>
