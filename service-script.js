@@ -1,20 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Get all the price buttons
-  const priceButtons = document.querySelectorAll('.price-btn');
+document.querySelectorAll('.price-btn').forEach(button => {
+  button.addEventListener('click', function () {
+      const providerName = this.getAttribute('data-name');
+      const providerPrice = this.getAttribute('data-price');
 
-  // Add event listener to each button
-  priceButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Retrieve data from button
-      const name = button.getAttribute('data-name');
-      const price = button.getAttribute('data-price');
+      // Get the existing cart from localStorage or create a new one
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-      // Store data in local storage
-      localStorage.setItem('providerName', name);
-      localStorage.setItem('providerPrice', price);
+      // Add the selected item to the cart
+      cart.push({ name: providerName, price: providerPrice });
 
-      // Redirect to checkout page
-      window.location.href = 'checkout.html';
-    });
+      // Save the updated cart back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Show a confirmation or animation
+      alert(`${providerName} - ₹ ${providerPrice} added to cart!`);
   });
 });
