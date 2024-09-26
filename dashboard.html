@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>EventConnect</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="profile.html">Event Managers</a></li>
+                    <li>
+                        <a href="cart.html" aria-label="View cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+                                <defs><style>.cls-1{fill:#fff;}</style></defs>
+                                <g id="cart">
+                                    <path class="cls-1" d="M29.46,10.14A2.94,2.94,0,0,0,27.1,9H10.22L8.76,6.35A2.67,2.67,0,0,0,6.41,5H3A1,1,0,0,0,3,7H6.41a.68.68,0,0,1,.6.31l1.65,3,.86,9.32a3.84,3.84,0,0,0,4,3.38H23.89a3.92,3.92,0,0,0,3.85-2.78l2.17-7.82A2.58,2.58,0,0,0,29.46,10.14ZM28,11.86l-2.17,7.83A1.93,1.93,0,0,1,23.89,21H13.48a1.89,1.89,0,0,1-2-1.56L10.73,11H27.1a1,1,0,0,1,.77.35A.59.59,0,0,1,28,11.86Z"/>
+                                    <circle class="cls-1" cx="14" cy="26" r="2"/>
+                                    <circle class="cls-1" cx="24" cy="26" r="2"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="profile-menu">
+                        <a href="#" id="profile-link">My Profile</a>
+                        <div class="profile-dropdown" id="profile-dropdown">
+                            <p>Your Email: <span>youremail@example.com</span></p>
+                            <button id="logout-btn">Logout</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="location-search">
+                <div class="location">
+                    <label for="city">Choose your city:</label>
+                    <select id="city" name="city">
+                        <option value="chennai">Chennai</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main content remains the same -->
+        <section class="hero">
+            <div class="content">
+                <div class="service-categories">
+                    <div class="category" onclick="selectSlide(0)">
+                        <img src="prepared-wedding-hall_8353-9873.avif" alt="Event Managers">
+                        <p>Event Managers</p>
+                    </div>
+                    <div class="category" onclick="selectSlide(1)">
+                        <img src="top-view-wedding-planning-resources-arrangement_23-2150279503.avif" alt="Services">
+                        <p>Services</p>
+                    </div>
+                </div>
+
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="manage.avif" alt="Event Planning">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="prepared-wedding-hall_8353-9873.avif" alt="Wedding Hall Preparation">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="top-view-wedding-planning-resources-arrangement_23-2150279503.avif" alt="Wedding Planning">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="Screenshot 2024-09-25 123330.png" alt="Event Decoration">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="script1.js"></script>
+    <script>
+        // Toggle the visibility of the profile dropdown
+        document.getElementById('profile-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            const dropdown = document.getElementById('profile-dropdown');
+            dropdown.classList.toggle('visible');
+        });
+
+        // Logout functionality (you can replace this with your real logout logic)
+        document.getElementById('logout-btn').addEventListener('click', function () {
+            alert('You have logged out!');
+        });
+    </script>
+</body>
+</html>
