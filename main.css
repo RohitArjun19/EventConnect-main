@@ -1,31 +1,29 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Fredoka One', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #0583D2;
   height: 100vh;
-  background-image: url('your-image-url'); /* Optional: Replace with a background image */
-  background-size: cover;
-  background-position: center;
+  background-color: #F4F5F7;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevent scrolling */
+  background: radial-gradient(circle at top right, #FFB6C1, #1D3557);
+  background-size: cover;
+  background-position: center;
 }
 
-/* Header styling */
 header {
-  background-color: #fff;
-  padding: 1% 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #1D3557;
+  padding: 1.5rem 5%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
 }
 
 header nav {
@@ -35,145 +33,133 @@ header nav {
 }
 
 header h2 {
-  font-family: "Fredoka One", cursive;
-  color: #0583D2;
+  color: #FFD700;
+  font-weight: 600;
 }
 
 header ul {
-  list-style: none;
   display: flex;
+  list-style-type: none;
 }
 
 header ul li {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 header ul li a {
+  color: #ffffff;
   text-decoration: none;
-  color: #0583D2;
-  font-weight: bold;
-  transition: color 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 header ul li a:hover {
-  color: #000;
-  transform: scale(1.05); /* Add hover effect */
+  color: #FFD700;
+  border-bottom: 2px solid #FFD700;
 }
 
-/* Login Container */
 .login-container {
   background-color: white;
-  padding: 7%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  animation: fadeIn 1s ease-in-out;
-  width: 40vw;
-  text-align: center;
-  z-index: 10;
-  margin-top: 10vh;
+  padding: 4rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  transition: 0.5s ease;
 }
 
 h1 {
-  margin-bottom: 8%;
-  text-align: center;
-  font-family: "Fredoka One", cursive;
-  color: #0583D2;
-  letter-spacing: 0.1em;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1D3557;
+  font-weight: bold;
 }
 
 input {
-  margin-bottom: 3%;
-  padding: 10px;
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: 0.3s ease-in-out;
+  padding: 15px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s;
 }
 
 input:focus {
-  border-color: #0583D2;
-  box-shadow: 0 0 8px rgba(5, 131, 210, 0.5);
+  outline: none;
+  border-color: #1D3557;
+  box-shadow: 0 0 10px rgba(29, 53, 87, 0.2);
 }
 
 button {
-  padding: 12px;
   width: 100%;
+  padding: 15px;
   border: none;
-  background-color: #0583D2;
-  color: white;
-  border-radius: 5px;
+  background-color: #1D3557;
+  color: #FFFFFF;
+  font-size: 1rem;
   font-weight: bold;
-  margin-top: 5%;
-  transition: 0.3s ease;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  cursor: pointer;
-  opacity: 0.9;
-  transform: scale(1.05);
+  background-color: #457B9D;
+  transform: translateY(-3px);
 }
 
 #sign-up {
-  margin-top: 3%;
+  background-color: #FFD700;
+  color: #1D3557;
+  margin-top: 1.5rem;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 p {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #999;
   text-align: center;
-  border-bottom: 1px solid #ccc;
-  line-height: 0.1em;
 }
 
 p span {
-  background: #fff;
   padding: 0 10px;
+  background-color: #fff;
+  color: #1D3557;
 }
 
-/* Footer styling */
+#return-btn {
+  background-color: transparent;
+  color: #1D3557;
+  margin-top: 1.5rem;
+  border: 2px solid #1D3557;
+}
+
 footer {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 5px 0;
-  font-size: 0.7em;
-  color: #000;
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  background-color: #1D3557;
+  color: #FFD700;
+  font-size: 0.8rem;
 }
 
 footer p {
-  color: #000;
-  font-family: "Fredoka One", cursive;
+  margin: 0;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes buttonPop {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-/* Responsive styling */
 @media (max-width: 768px) {
   .login-container {
-    width: 60vw;
-    padding: 5%;
+    width: 80vw;
+    padding: 2rem;
   }
 
   header nav ul {
@@ -181,40 +167,18 @@ footer p {
     align-items: center;
   }
 
-  header nav ul li {
-    margin-left: 0;
-    margin-bottom: 10px;
+  header ul li {
+    margin: 10px 0;
   }
 }
 
 @media (max-width: 480px) {
-  .login-container {
-    width: 80vw;
-    padding: 5%;
-  }
-
-  header h2 {
-    font-size: 1.2em;
-  }
-
-  header nav ul li a {
-    font-size: 0.9em;
+  h1 {
+    font-size: 1.5rem;
   }
 
   input, button {
-    font-size: 0.9em;
-    padding: 2.5%;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  p span {
-    font-size: 0.9em;
-  }
-
-  footer {
-    font-size: 0.6em;
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }
